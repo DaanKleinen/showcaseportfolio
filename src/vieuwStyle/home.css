@@ -1,0 +1,397 @@
+#homescreen {
+  text-align: center;
+  height: calc(100vh - 25vh);
+  overflow-y: hidden;
+}
+
+#homescreen span {
+  color: var(--highlight);
+}
+
+#homeScreenImg {
+  margin-top: 25px;
+  width: 50vw;
+}
+
+#aboutMe {
+  display: grid;
+  background-color: var(--highlight);
+  grid-template-columns: 90%;
+  grid-template-areas:
+    "aboutTitle"
+    "aboutText "
+    "aboutImg";
+  grid-template-rows: auto;
+  justify-content: center;
+  margin-top: -25px;
+  padding-top: 25px;
+  padding-bottom: 35px;
+}
+
+#aboutMe h1 {
+  text-align: center;
+  grid-area: aboutTitle;
+}
+
+#aboutMe p {
+  max-width: 75ch;
+  grid-area: aboutText;
+}
+
+#aboutMe img {
+  width: 200px;
+  margin: 0 auto;
+  grid-area: aboutImg;
+}
+
+#workHomePage {
+  text-align: center;
+  padding: 50px 0 50px 0;
+}
+
+#workHomePage #subtext {
+  margin-top: -15px;
+  padding-bottom: 50px;
+}
+
+#workWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.workItem {
+  margin: 0 auto;
+}
+
+.workItem *{
+  overflow: hidden;
+}
+
+#workImg{
+  display: none;
+  position: absolute;
+  margin-top: -150px;
+  margin-left: -40px;
+  z-index: 100;
+  transition: 0.3s;
+}
+
+#workImg img{
+  height: 150px;
+}
+
+.button {
+  border: 3px solid var(--highlight);
+  color: var(--highlight);
+  border-radius: 10px;
+  padding: 10px 30px;
+  margin: 100px auto 0 auto;
+  transition: all 0.3s;
+  width:fit-content;
+}
+
+#servicesHomePage {
+  background-color: var(--highlight);
+  margin-top: -25px;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  scroll-margin-top: -40px ;
+}
+
+#serviceWrapper {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  gap: 25px;
+}
+
+.services {
+  background-color: #fff;
+  width: 300px;
+  padding-bottom: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(35, 35, 35, 50%);
+}
+
+.services img {
+  width: 50px;
+  margin-top: 15px;
+}
+
+.serviceText{
+  margin-top: -15px;
+}
+
+.services p {
+  margin-top: -10px;
+}
+
+#testimonials {
+  padding-bottom: 100px;
+  scroll-margin-top: 50px !important;
+}
+
+#testimonials h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 600;
+}
+
+#testimonials p {
+  text-align: center;
+}
+
+.carousel.carousel-slider .control-arrow{
+  width: 50px;
+  border-radius: 20px 10px 20px 10px;
+}
+
+#contact{
+  border-top: 1px solid rgba(112, 112, 112, 50%);
+  text-align: center;
+  padding: 100px 0;
+}
+
+#contact h2{
+  border: 3px solid var(--highlight);
+  color: var(--highlight);
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 10px 30px;
+  transition: all 0.3s;
+  width:fit-content;
+}
+
+#contact h2:hover {
+  padding: 10px 75px;
+  background: var(--highlight);
+  color: #fff;
+}
+
+#footerWrapper{
+  background-color: var(--highlight);
+  display: grid;
+  grid-template-columns: 33.3% 66.7%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px 0;
+}
+
+#footerLogo h3{
+margin-top: -20px;
+color: #fff;
+}
+
+#footerInfo{
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+#footerInfo h1{
+  color: #fff;
+  margin: 0;
+}
+
+@media only screen and (min-width: 1100px) {
+
+  h1 {
+    font-size: 30px;
+  }
+
+  #homescreen {
+    margin-top: 25px;
+  }
+
+  #homescreen p {
+    margin-top: -15px;
+    font-size: 20px;
+  }
+
+  #homeScreenImg {
+    width: 300px;
+  }
+
+  #wave1 {
+    margin-top: -50px;
+  }
+
+  #aboutMe {
+    grid-template-columns: 70% 30% !important;
+    grid-template-areas:
+      "aboutTitle aboutTitle"
+      "aboutText aboutImg" !important;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  #aboutMe img {
+    width: 300px;
+    margin: 0 0;
+  }
+
+  #workHomePage {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  #workHomePage #subtext {
+    margin-top: -40px;
+    padding-bottom: 50px;
+  }
+
+  #workWrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
+
+  .workItem {
+    margin: 0 auto;
+  }
+
+  figure.snip1206 {
+    width: 400px;
+  }
+
+  .button:hover {
+    padding: 10px 50px;
+  }
+
+  #wave2 {
+    transform: scale(-1, 1);
+  }
+
+  #servicesHomePage {
+    background-color: var(--highlight);
+    margin-top: -50px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+
+  #serviceWrapper {
+    display: grid;
+    grid-template-columns: 30% 30% !important;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .services {
+    background-color: #fff;
+    width: 325px;
+    padding-bottom: 15px;
+    margin: 0 auto;
+  }
+
+  .services img {
+    width: 75px;
+    margin-top: 15px;
+  }
+
+  .services p {
+    margin-top: -10px;
+  }
+
+  #workImg{
+    margin-left: -40px !important;
+  }
+
+}
+
+@media only screen and (min-width: 1000px) {
+  #workImg{
+    margin-left: 5px ;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #workImg{
+    margin-left: -10px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  #homescreen {
+    margin-top: 25px;
+  }
+
+  #homescreen p {
+    margin-top: -15px;
+    font-size: 20px;
+  }
+
+  #homeScreenImg {
+    width: 300px !important;
+  }
+
+  #wave1 {
+    margin-top: -50px;
+  }
+
+  #aboutMe {
+    grid-template-columns: 75ch !important;
+    grid-template-areas:
+      "aboutTitle"
+      "aboutText"
+      "aboutImg";
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  #aboutMe img {
+    width: 300px;
+  }
+
+  #workHomePage {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  #workHomePage h1 {
+    padding-bottom: 25px;
+  }
+
+  .button {
+    margin-top: 50px;
+  }
+
+
+  figure.snip1206 {
+    width: 400px;
+  }
+
+  .button:hover {
+    padding: 10px 50px;
+  }
+
+  #wave2 {
+    transform: scale(-1, 1);
+  }
+
+  #workImg{
+    margin-left: -30px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #workImg{
+    display: block !important;
+  }
+
+}

@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./componentStyle/nav.css";
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import MobileNavigation from "./components/MobileNavigation";
+import Home from "./vieuws/Home";
+import Work from "./vieuws/Work";
 
 function App() {
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    function handleResize() {
+      setWidth(window.innerWidth);
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [width]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router basename="/showcasePortfolio">
+      <div className="App">
+        {width > 800 ? <Navigation /> : <MobileNavigation />}
+
+        <div id="content">
+          <Route path="/" exact render={(name) => <Home />} />
+          <Route path="/work" exact render={(name) => <Work />} />
+        </div>
+      </div>
+    </Router>
   );
 }
 
